@@ -19,4 +19,10 @@ public class Giro extends Rekening {
         }
         return false;
     }
+
+    @Override
+    public void cetakInfo() {
+        super.cetakInfo();
+        System.out.println("     Giro, batas overdraft " + formatRupiah(batasOverdraft));
+    }
 }

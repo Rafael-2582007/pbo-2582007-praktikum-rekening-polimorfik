@@ -1,5 +1,5 @@
 public class Tabungan extends Rekening implements BerBunga {
-    private double bunga;   // persen per bulan, contoh 2.5
+    private double bunga;   // persen per bulan
 
     public Tabungan(String nomor, String pemilik, int saldo, double bunga) {
         super(nomor, pemilik, saldo);
@@ -16,5 +16,11 @@ public class Tabungan extends Rekening implements BerBunga {
         int hasil = (int) (saldo * bunga / 100);
         saldo += hasil;
         return hasil;
+    }
+
+    @Override
+    public void cetakInfo() {
+        super.cetakInfo();
+        System.out.println("     Tabungan, bunga " + bunga + "% per bulan");
     }
 }
